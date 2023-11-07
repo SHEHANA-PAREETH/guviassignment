@@ -15,7 +15,7 @@ import AxiosInstance from '../config/axiosinstance';
 
 
 
-function Signupform() {
+function Signup () {
 
   
   const[eye,setEye]=useState(false)
@@ -322,4 +322,4 @@ console.log(loginData);
   
   }
 
-export default Signupform
+export default Signup
