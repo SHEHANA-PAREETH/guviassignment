@@ -41,6 +41,11 @@ const userDataSchema=new mongoose.Schema({
     profilepic:{
         type:String,
         required:true  
+    },
+    userId:{
+        type:String,
+        required:true  
+    
     }
     
     

@@ -27,7 +27,8 @@ const uploadData=(req,res)=>{
            mobileno:req.body.mobileno,
            village:req.body.village,
            qualification:req.body.qualification,
-           occupation:req.body.occupation
+           occupation:req.body.occupation,
+           userId:req.userId
         }).save().then((response)=>{
                 console.log(response);
                 if(response)
@@ -44,7 +45,7 @@ const uploadData=(req,res)=>{
 }
 const getUserData=(req,res)=>{
     if(req.userId){
-        USERDATA.findOne({}).sort({_id:-1}).
+        USERDATA.findOne({userId:req.userId}).sort({_id:-1}).
         then((resp)=>{
             console.log(resp);
             if(resp)

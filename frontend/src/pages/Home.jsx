@@ -8,6 +8,7 @@ import AxiosInstance from '../config/axiosinstance'
 import Navcomponent from './Navcomponent'
 
 function Home() {
+
     useEffect(() => {
         let isAuth = JSON.parse(localStorage.getItem('user'));
         if( isAuth == null) {
@@ -33,10 +34,7 @@ function Home() {
           occupation:'',
 
         })
-        useEffect(()=>{
-            console.log(userData);
-            console.log(files);
-                 },[userData])
+       
 
                
           const onSelectFile = (event) => {

@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Navcomponent from './Navcomponent';
 import { useNavigate } from 'react-router-dom';
 function ViewuseData() {
+ 
 const navigate=useNavigate()
   const [userdata,setdata]=useState()
     useEffect(()=>{
@@ -20,6 +21,16 @@ const navigate=useNavigate()
 AxiosInstance.get('user/getData').then((res)=>{
     console.log(res.data.data);
     setdata(res?.data?.data)
+    if(message===false){
+      Swal.fire({  
+         
+        text: 'not uploaded details.',
+       
+      }).then(()=>{
+        navigate('/home')
+      
+      })
+    }
 })
     },[])
   return (
