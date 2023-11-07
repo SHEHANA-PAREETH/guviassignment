@@ -5,6 +5,7 @@ import './ViewuseData.css'
 import Button from 'react-bootstrap/Button';
 import Navcomponent from './Navcomponent';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2'
 function ViewuseData() {
  
 const navigate=useNavigate()
@@ -21,7 +22,7 @@ const navigate=useNavigate()
 AxiosInstance.get('user/getData').then((res)=>{
     console.log(res.data.data);
     setdata(res?.data?.data)
-    if(message===false){
+    if(res.data.message===false){
       Swal.fire({  
          
         text: 'not uploaded details.',
