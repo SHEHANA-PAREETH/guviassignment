@@ -67,7 +67,7 @@ const [errors,setErrors]=useState({
 
 
   console.log('success');
-  AxiosInstance.post(`/auth/register`,loginData).then((res)=>{ 
+  AxiosInstance.post(`/register`,loginData).then((res)=>{ 
   
     console.log(res.data);
  

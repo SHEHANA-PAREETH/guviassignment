@@ -21,9 +21,6 @@ app.use(cors(corsOptions))
 app.listen(process.env.PORT||6000,
      ()=>console.log('server running'));
     
- app.get('/',(req,res)=>{
-    res.send('this is user api')
- })
-     
- app.use('/auth',authRouter)  
+ 
+ app.use('/',authRouter)  
  app.use('/user',userRouter)  

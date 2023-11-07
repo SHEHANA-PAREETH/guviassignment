@@ -47,7 +47,7 @@ const handleInputChange=(e)=>{
  const handleSubmit=(e)=>{
   e.preventDefault()
   console.log(loginData);
-  AxiosInstance.post(`/auth/login`,loginData).then((res)=>{
+  AxiosInstance.post(`/`,loginData).then((res)=>{
     console.log(res?.data?.msg);
     if(res?.data?.msg==="user login success"){
 

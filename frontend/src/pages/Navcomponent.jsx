@@ -22,7 +22,7 @@ const {user}=useSelector((state)=>state.user)
   const handleLogout=()=>{
   
   
-AxiosInstance.get(`/auth/logout`).then((resp)=>{
+AxiosInstance.get(`/logout`).then((resp)=>{
   console.log(resp);
   if(resp.data.logout){
     Swal.fire({    
