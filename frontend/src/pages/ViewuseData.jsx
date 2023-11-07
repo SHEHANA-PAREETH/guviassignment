@@ -14,9 +14,7 @@ const navigate=useNavigate()
         if( isAuth == null) {
             navigate("/");
         }
-        else{
-          navigate("/showuploads");
-        }
+       
        
   
 AxiosInstance.get('user/getData').then((res)=>{
