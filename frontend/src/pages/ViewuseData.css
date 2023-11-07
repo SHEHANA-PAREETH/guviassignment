@@ -1,0 +1,6 @@
+.outer-box{
+    border:1px solid grey;
+    width:25%;
+    box-shadow: 2px 2px 2px 2px grey;
+    border-radius: 5px;
+}
