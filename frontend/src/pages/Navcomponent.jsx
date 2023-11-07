@@ -30,7 +30,7 @@ AxiosInstance.get(`/logout`).then((resp)=>{
       icon: 'success'
     }).then(()=>{
         localStorage.clear()
-    navigate('/login')
+    navigate('/')
    
    })
   }

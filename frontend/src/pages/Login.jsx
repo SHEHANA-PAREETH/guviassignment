@@ -18,7 +18,7 @@ function Login() {
   useEffect(() => {
     let isAuth = JSON.parse(localStorage.getItem('user'));
     if( isAuth == null) {
-        navigate("/login");
+        navigate("/");
     }
     else{
         navigate('/home')
